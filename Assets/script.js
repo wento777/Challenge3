@@ -8,9 +8,9 @@ var passwordText = document.querySelector("#password");
 // I want to create a master array that will hold all the possible characters for our password
 var masterArray = [];
 const lower = "abcdefghijklmnopqrstuvwxyz".split('');
-console.log(lower);
+console.log(lower)
 const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
-console.log(upper);
+console.log(upper)
 const specials = "!@#$%^&*".split('');
 console.log(specials);
 const numbs = "1234567890".split('');
@@ -66,17 +66,21 @@ function generatePassword(event) {
       }
     
     
-      
+
 
       // create another function that randomly selects an index from the masterArray and adds it to a string variable
       // do that for as many times as the value of passwordLength
       for( var i = 0; i <= passwordLength; i++) {
-         
+        var randomNumber = Math.floor(Math.random() * passwordLength);
+      
+       }
+      
     
-        }
+
       // return it here
-     
-      return generatePassword;
+   
+    
+      return masterArray;
       
       }
 
@@ -87,5 +91,4 @@ function generatePassword(event) {
 // Add event listener to generate button
 
 generateBtn.addEventListener("click", writePassword);
-document.getElementById("myBtn").addEventListener("click", displaydate);
 
